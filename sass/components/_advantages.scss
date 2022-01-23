@@ -1,0 +1,107 @@
+.advantages-section,
+.services-section,
+.portfolio-section,
+.clients-section {
+  @media screen and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.services-section.no-padding {
+  padding-top: 0;
+}
+
+.section-title {
+  color: var(--primary-text-color);
+
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 28px;
+  }
+}
+
+.features {
+  @media screen and (min-width: 320px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 120px;
+    margin-bottom: 30px;
+
+    background-color: var(--third-background-color);
+  }
+
+  &__item {
+    @media screen and (min-width: 320px) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc(50% - 30px);
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc(25% - 30px);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
+
+    color: var(--primary-text-color);
+
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    color: var(--secondary-text-color);
+
+    margin-top: 0;
+
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+  }
+}

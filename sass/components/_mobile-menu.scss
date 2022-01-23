@@ -1,0 +1,125 @@
+.mobile-menu-button {
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    z-index: 2;
+  }
+
+  &:focus {
+    fill: var(--accent-color);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  & .icon-menu {
+    display: none;
+  }
+
+  &.is-open .icon-menu {
+    display: block;
+  }
+
+  &.is-open .icon-cross {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  display: none;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: var(--primary-background-color);
+
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  z-index: 1;
+
+  &.is-open {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .mobile-nav {
+    font-size: 40px;
+    line-height: 1.17;
+    margin-left: 40px;
+    margin-top: 48px;
+
+    &__link {
+      color: var(--primary-text-color);
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    &__link:focus {
+      color: var(--accent-color);
+    }
+  }
+
+  .mobile-contacts {
+    margin-left: 40px;
+
+    &__link:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    &__link:last-child {
+      margin-bottom: 64px;
+    }
+
+    &__phone {
+      font-size: 34px;
+      line-height: 1.17;
+
+      color: var(--accent-color);
+    }
+
+    &__email {
+      color: var(--secondary-text-color);
+      font-size: 24px;
+      line-height: 1.16;
+    }
+  }
+
+  .mobile-networks {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-bottom: 48px;
+    margin-left: 40px;
+
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+
+    &__item:not(:last-child)::after {
+      content: '';
+      display: inline-flex;
+      vertical-align: top;
+      width: 1px;
+      height: 22px;
+      margin-right: 10px;
+      margin-left: 10px;
+      background-color: rgba(33, 33, 33, 0.2);
+    }
+
+    &__link {
+      color: var(--accent-color);
+    }
+  }
+}

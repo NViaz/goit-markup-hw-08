@@ -1,0 +1,42 @@
+.services-section {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.container .services {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.services__item {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.services__image-wrap {
+  position: relative;
+}
+
+.services__image-description {
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 370px;
+  height: 70px;
+
+  background-color: var(--works-img-bgcolor);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--third-text-color);
+}
