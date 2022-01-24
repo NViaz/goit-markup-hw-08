@@ -15,10 +15,6 @@
   overflow-y: scroll;
   z-index: 4;
 
-  @media screen and (max-width: 767px) {
-    padding: 93px 15px 94px 15px;
-  }
-
   &.is-hidden {
     opacity: 0;
     pointer-events: none;
