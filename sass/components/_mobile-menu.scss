@@ -50,6 +50,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: fixed;
   }
 
   .mobile-nav {
@@ -60,6 +61,10 @@
 
     &__link {
       color: var(--primary-text-color);
+    }
+
+    &__link--current {
+      color: var(--accent-color);
     }
 
     &__item:not(:last-child) {
@@ -83,10 +88,16 @@
     }
 
     &__phone {
-      font-size: 34px;
-      line-height: 1.17;
+      @media screen and (min-width: 320px) {
+        font-size: 30px;
+        line-height: 1.17;
 
-      color: var(--accent-color);
+        color: var(--accent-color);
+      }
+
+      @media screen and (min-width: 480px) {
+        font-size: 34px;
+      }
     }
 
     &__email {

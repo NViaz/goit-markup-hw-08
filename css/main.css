@@ -53,6 +53,12 @@ body {
   }
 }
 
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
@@ -543,9 +549,9 @@ header .main-nav__box .container.main-nav {
 
 @media screen and (min-width: 768px) {
   .features__item {
-    -webkit-flex-basis: -webkit-calc(50% - 30px);
-        -ms-flex-preferred-size: calc(50% - 30px);
-            flex-basis: calc(50% - 30px);
+    -webkit-flex-basis: -webkit-calc(50% - 15px);
+        -ms-flex-preferred-size: calc(50% - 15px);
+            flex-basis: calc(50% - 15px);
   }
 }
 
@@ -704,6 +710,8 @@ header .main-nav__box .container.main-nav {
 @media screen and (min-width: 320px) {
   .team-members__item {
     margin-bottom: 30px;
+    width: 100%;
+    max-width: 450px;
   }
 }
 
@@ -721,6 +729,13 @@ header .main-nav__box .container.main-nav {
     -webkit-flex-basis: -webkit-calc(100% / 4 - var(--card-set-gap));
         -ms-flex-preferred-size: calc(100% / 4 - var(--card-set-gap));
             flex-basis: calc(100% / 4 - var(--card-set-gap));
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .team-members__photo {
+    width: 100%;
+    max-width: 450px;
   }
 }
 
@@ -980,6 +995,12 @@ footer .logo {
   color: var(--third-text-color);
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .studio-contacts {
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .studio-address {
     margin-bottom: 60px;
@@ -1011,7 +1032,7 @@ footer .logo {
   color: var(--fourth-text-color);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .studio-address .contacts__link {
     display: block;
     text-align: center;
@@ -1109,7 +1130,6 @@ footer .logo {
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
-  width: 358px;
   height: 50px;
   text-indent: 16px;
   margin-top: 20px;
@@ -1117,6 +1137,14 @@ footer .logo {
   -webkit-border-radius: 4px;
           border-radius: 4px;
   background-color: var(--secondary-background-color);
+}
+
+@media screen and (min-width: 320px) {
+  .subscribe__email {
+    width: 100%;
+    max-width: -webkit-calc(100% - 15px);
+    max-width: calc(100% - 15px);
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1128,14 +1156,21 @@ footer .logo {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+    width: 450px;
   }
 }
 
-.subscribe__email:focus {
+@media screen and (min-width: 1200px) {
+  .subscribe__email {
+    width: 358px;
+  }
+}
+
+.subscribe:focus {
   outline: transparent;
 }
 
-.subscribe .subscribe__button {
+.subscribe__button {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1169,18 +1204,19 @@ footer .logo {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 767px) and (max-width: 1199px) {
-  .subscribe .subscribe__button {
+@media screen and (min-width: 320px) and (max-width: 1199px) {
+  .subscribe__button {
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
   }
 }
 
-.subscribe .subscribe__button:hover, .subscribe .subscribe__button:focus {
+.subscribe__button:hover, .subscribe__button:focus {
   background-color: var(--order-button-background-color);
 }
 
-.subscribe .subscribe__icon {
+.subscribe__icon {
   margin-left: 10px;
 }
 
@@ -1200,7 +1236,7 @@ footer .logo {
 @media screen and (min-width: 768px) {
   .filter {
     width: 611;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
@@ -1293,6 +1329,13 @@ footer .logo {
   margin-top: var(--card-set-gap);
 }
 
+@media screen and (min-width: 480px) {
+  .projects__item {
+    width: 100%;
+    max-width: 450px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .projects__item {
     display: -webkit-box;
@@ -1347,6 +1390,13 @@ footer .logo {
   overflow: hidden;
 }
 
+@media screen and (min-width: 480px) {
+  .projects__picture {
+    width: 100%;
+    max-width: 450px;
+  }
+}
+
 .projects__thumb-info {
   display: inline-block;
   position: absolute;
@@ -1368,6 +1418,13 @@ footer .logo {
   -o-transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 479px) {
+  .projects__thumb-info {
+    font-size: 12px;
+    padding: 49px 24px;
+  }
 }
 
 .link:hover .projects__thumb-info {
@@ -1483,8 +1540,6 @@ footer .logo {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  height: 581px;
   padding: 40px;
   -webkit-transform: translate(-50%, -50%) scale(1);
       -ms-transform: translate(-50%, -50%) scale(1);
@@ -1518,11 +1573,22 @@ footer .logo {
 
 .modal__headline {
   font-weight: 700;
-  font-size: 20px;
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+}
+
+@media screen and (min-width: 320px) {
+  .modal__headline {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .modal__headline {
+    font-size: 20px;
+  }
 }
 
 .modal__form {
@@ -1611,14 +1677,19 @@ footer .logo {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.modal__policy-box {
-  font-weight: 400;
-  letter-spacing: 0.03em;
-  margin-bottom: 30px;
-  color: var(--secondary-text-color);
+@media screen and (min-width: 320px) {
+  .modal__policy-box {
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: 12px;
+    line-height: 1.17;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    color: var(--secondary-text-color);
+  }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .modal__policy-box {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1632,13 +1703,16 @@ footer .logo {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-    font-size: 12px;
-    line-height: 1.17;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .modal__policy-box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 30px;
     font-size: 14px;
     line-height: 1.71;
     -webkit-box-align: center;
@@ -1649,6 +1723,9 @@ footer .logo {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    color: var(--secondary-text-color);
   }
 }
 
@@ -1701,12 +1778,6 @@ footer .logo {
   -o-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media screen and (max-width: 767px) {
-  .modal__submit-btn {
-    margin-top: 30px;
-  }
 }
 
 .modal__submit-btn:hover, .modal__submit-btn:focus {
@@ -1791,6 +1862,7 @@ footer .logo {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: fixed;
 }
 
 .mobile-menu .mobile-nav {
@@ -1802,6 +1874,10 @@ footer .logo {
 
 .mobile-menu .mobile-nav__link {
   color: var(--primary-text-color);
+}
+
+.mobile-menu .mobile-nav__link--current {
+  color: var(--accent-color);
 }
 
 .mobile-menu .mobile-nav__item:not(:last-child) {
@@ -1824,10 +1900,18 @@ footer .logo {
   margin-bottom: 64px;
 }
 
-.mobile-menu .mobile-contacts__phone {
-  font-size: 34px;
-  line-height: 1.17;
-  color: var(--accent-color);
+@media screen and (min-width: 320px) {
+  .mobile-menu .mobile-contacts__phone {
+    font-size: 30px;
+    line-height: 1.17;
+    color: var(--accent-color);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .mobile-menu .mobile-contacts__phone {
+    font-size: 34px;
+  }
 }
 
 .mobile-menu .mobile-contacts__email {

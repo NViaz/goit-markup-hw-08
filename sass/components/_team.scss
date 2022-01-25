@@ -39,6 +39,8 @@
   &__item {
     @media screen and (min-width: 320px) {
       margin-bottom: 30px;
+      width: 100%;
+      max-width: 450px;
     }
 
     @media screen and (min-width: 768px) {
@@ -52,6 +54,11 @@
   }
 
   &__photo {
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      width: 100%;
+      max-width: 450px;
+    }
+
     @media screen and (min-width: 768px) {
       width: 100%;
     }
